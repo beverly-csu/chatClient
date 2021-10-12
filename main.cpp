@@ -4,8 +4,14 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    Client client("sUser", "192.168.0.107", 7777);
-    client.sendMsgToClient("FUCK THIS WORLD!");
+    Client client("sUser", "127.0.0.1", 5005);
+//    while (true) {
+//        if (client.isConnected() == QAbstractSocket::SocketState()) {
+//            MessageThread thread("msg", &client);
+//            thread.start();
+//            break;
+//        }
+//    }
 
     return a.exec();
 }
